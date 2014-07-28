@@ -22,6 +22,7 @@ def process(line):
         #   he said "argh (my leg hurts!)," and then he left -- never to return
         words = re.split(r"[.!()\"',:?\-\n ]+", line)
         for word in words:
+            print( "\"{0}\"\t".format( word), end="")
             ht.put(word, 0)
         return len(words) - 1
 
